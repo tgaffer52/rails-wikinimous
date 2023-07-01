@@ -1,0 +1,8 @@
+<div class="container">
+<ul reversed>
+  <% @articles.reverse_each do |article| %>
+    <%= link_to article.title, article_path(article), class: "fs-2 link-underline link-underline-opacity-0 link-underline-opacity-100-hover" %>
+    <p class="d-block text-truncate"><%= article.content %></p>
+  <% end %>
+</ol>
+</div>

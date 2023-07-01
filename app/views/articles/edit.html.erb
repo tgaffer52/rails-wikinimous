@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Edit article</h1>
+  <%= form_with model: @article do |f|%>
+    <%= f.label :title, class: "form-label" %>
+    <%= f.text_field :title, class: "form-control", value: @article.title %>
+    <%= f.label :content, class: "form-label"%>
+    <%= f.text_area :content, class: "form-control", value: @article.content %>
+    <%= f.submit 'Update Article', class: 'btn btn-light' %>
+  <% end %>
+</div>
